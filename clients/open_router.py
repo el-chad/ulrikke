@@ -1,14 +1,8 @@
 import instructor
 from openai import AsyncOpenAI
 from functools import lru_cache
-from typing import TypedDict
 from config import get_settings
 from agent import render_prompt, ModelConfig, QueryRouterModelOutput
-
-
-class Model(TypedDict):
-    name: str
-    trainingCutOffDate: str
 
 
 class OpenRouter:
